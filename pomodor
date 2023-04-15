@@ -1,0 +1,50 @@
+const minutCalc = minut => {
+
+if (minut >= 1 && minut <= 25) {
+  return 1
+} 
+
+else if (minut === 26) { 
+  return (minut - 1) / 25
+} 
+else if (minut === 27) {
+  return (minut - 2) / 25
+} 
+else if (minut === 28) {
+  return (minut - 3) / 25
+} 
+else if (minut === 29) {
+  return (minut - 4) / 25
+} 
+else if (minut >= 30 && minut <= 55) {
+  return (minut - 5) / 25
+} 
+else if (minut === 56) {
+  return (minut - 6) / 25
+} 
+else if (minut === 57) {
+  return (minut - 7) / 25
+}
+ else if (minut === 58) {
+  return (minut - 8) / 25
+}
+ else if (minut === 59) {
+  return (minut - 9) / 25
+}
+ else if (minut === 60) {
+  return (minut - 10) / 25
+} 
+else {
+  console.log('60dan kichik bo/lgan raqam kirgizing');
+}
+}
+
+const calcHours = hours =>{
+ return (hours * 60 - hours * 10 ) / 25
+}
+
+const Pomodorotimer = (hours,minut) =>{
+  return calcHours(hours) +  minutCalc(minut)
+}
+
+console.log(Pomodorotimer(3,20))
